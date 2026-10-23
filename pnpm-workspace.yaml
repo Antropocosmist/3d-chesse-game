@@ -1,0 +1,12 @@
+# Exact-version exemptions from the trust-downgrade check. Both are old,
+# widely used releases published without provenance after an earlier
+# version had it:
+#   undici-types@6.21.0 (2024-11-13), via @types/node@22
+#   semver@6.3.1 (2023-07-10), via @babel/core
+trustPolicyExclude:
+  - undici-types@6.21.0
+  - semver@6.3.1
+
+# esbuild installs its native binary in a postinstall script (used by Vite).
+allowBuilds:
+  esbuild: true
